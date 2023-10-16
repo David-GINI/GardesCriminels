@@ -15,3 +15,6 @@ Il est essentiel d'éviter certaines configurations pour prévenir d'éventuelle
 Toutes les autres combinaisons sont possibles.
 
 C'est à vous d'organiser le transfert de manière à ce que tout se passe sans incident.
+
+![Image d'illustration générée par DALL E 3](test_image.png)
+<small>Image générée par DALL-E 3</small>
