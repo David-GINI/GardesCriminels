@@ -82,16 +82,16 @@ void guarde(int id) {
 
 
 int main() {
-    thread people[12];
+    thread people[12]; // ici : 12 est le nombre de personnes qui arrivent on peut modifier afin d'en faire arriver plus ou moins
 
 
-    for (int i = 0; i < 12; i++) {
-        int random_number = rand() % 2;
-        if (random_number== 0) {
+    for (int i = 0; i < 12; i++) { // ici : 12 est le nombre de personnes qui arrivent on peut modifier afin d'en faire arriver plus ou moins
+        int random_number = rand() % 2; // On crée un nombre aléatoire
+        if (random_number== 0) { // Si nombre random est pair :
             totalDetenus++;
             people[i] = thread(detenu, totalDetenus);
             cout << "Arrivée du detenu " << totalDetenus << "." << endl;
-        } else {
+        } else { // Si nombre random est impair
             totalGuardes++;
             people[i] = thread(guarde, totalGuardes);
             cout << "Arrivée du guarde " << totalGuardes << "." << endl;
@@ -100,7 +100,7 @@ int main() {
         this_thread::sleep_for(chrono::milliseconds(100));
     }
 
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 12; i++) {// ici : 12 est le nombre de personnes qui arrivent on peut modifier afin d'en faire arriver plus ou moins
         people[i].join();
     }
 
